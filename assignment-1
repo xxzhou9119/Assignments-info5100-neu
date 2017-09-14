@@ -1,0 +1,311 @@
+ Problem1：Hiking 
+Description：Go hiking on Mountain Rainier on weekend. 
+Substories：
+ 1.1. Prepare for hiking：rent a car，buy equipments for hiking
+ 1.2. On the way to hiking：fill the gas，have lunch at a restaurant
+ 1.3. Hike in the mountain：buy the ticket to the park，rest in the rest station 
+
+Things（Objects）：
+   hiker：
+     data：name，gender，phoneNumber，address，
+     behavior：rent，buy，fillTheGas，hike, eat，drink，rest
+   Mountain:
+     data: height, address 
+     behavior: open close
+   carRentalCompany：
+     data：name，address，phoneNumber
+     behavior：rentOutCar
+   car：
+     data：Price, Color, size, brand, type，series….
+     behavior：start, brake，stop, fill Gas 
+   hikingEquipmentsShop：
+     data：products 
+     behavior：sellHikingEquipments
+  gasStation:
+     data: name，address，phoneNumber
+     behavior：sellTheGas, 
+  gas：
+     data：type, price,
+     behavior：N/A
+  restaurant：
+     data：name，address，phoneNumber
+     behavior：serveLunch
+  ticketOffice：
+     data：N/A
+     behavior： sellTheTickets
+  restStation：
+     data：name，address
+     behavior：sellProducts
+
+
+Sequence of Flow - Invoke Objects with Behaviors
+Hiker zoe;
+CarRentalCompany Hertz;
+Mountain mount；
+Car car;
+HikingEquipmentShop REI;
+GasStation Shell;
+Gas gas97;
+Restaurant Mcdonald’s;
+TicketOffice office;
+RestStation lobby
+  
+If mount. isOpen
+   zoe. rentCar  -> Hertz, car
+   zoe.buyHikingEquipment   ->REI 
+   if  car.fullOfGas ！= true
+　　　car.fillGas  -> shell, gas97
+　　　end
+   if zoe is hungry
+     car. stop
+     zoe.eatAtRestaurant -> Mcdonald’s
+     end
+   zoe.buyTicket -> office
+   loop
+     zoe.hike
+     if zoe is tired and lobby is available
+       zoe. rest
+   end
+else
+   zoe. cantHikeToday
+
+
+
+
+
+
+
+2. Organise a career fair(Suppose you are the organiser)
+substories:
+ 2.1 find a appropriate location
+ 2.2 contact companies
+ 2.3 put up advertisement
+ 
+Things(Objects):
+  career fair：
+　　data：name，organiser，location，time，website，company[] companies, jobSeeker[] jobSeekers
+　　behavior：open，close
+  organiser:
+　　data: name，address，phoneNumber，emailAddress，
+　　behavior：organise，findLocation，contact，inform，negotiate，putUpAdervertisement，
+  location：
+　　data：name，address，size，capacity，
+　　behavior：N/ A
+  Company：
+　　data: name, address, requirement
+　　behavior: negotiate，agree，refuse，
+  job seeker：
+　　data：name，target，careerGoal，resume 
+　　behavior：register，upload，talk，introduceSelf
+
+Sequence of Flow - Invoke Objects with Behaviors
+Career Fair 17fall;
+organizer NEU
+location suite103
+jobSeeker student
+
+If suite103 is appropriate -> time, address, size, capacity
+  loop
+　　if company.agree != true
+　　  organizer.negotiateWithCompany   -> organizer, company: agree/refuse  
+  end
+  organizer.putUpAdvertisement 
+  studentNum=0
+  loop
+　　if Num< Suite103.capacity
+      student.registerOnWebsite 
+　　  studentNum=studentNum+1
+　　else
+　　  student.cantRegister
+　　end
+else
+  organiser. findAnotherLocation
+
+
+
+
+
+
+
+
+3. Order Pizza from Pizza Hut
+
+Things（objects）:
+   Consumer  :
+	   Data: Name, Address, Phone
+	   Behaviors : search, choose，create, review，order，cancel, sign in,
+                 sign up
+	Internet
+		Data :Group of Websites (Collection of Websites)
+		Behaviors : searchForWebsites 
+	PizzaHutWebsite
+		Data : URL, pizza, uesAccount, pizzaOrder
+		Behaviors : search, sort，display, add，drop，placeTheOrder, open, closed
+	pizza：	
+		Data : name，size，crust，sauce，crustFlavor，toppings，
+		Behavior: N/A
+	PizzaHutStore：
+       data：
+       behavior：takeOrder，makePizza，deliver
+   CreditCard
+		Data : Number, name, company, expiry, security code
+		Behavior : N/A
+	CreditCardCompany
+	   Data: name, address
+	   Behavior : authorizeTransaction
+		
+Sequence of invoking behaviors on Objects:
+
+Consumer zoe
+Internet internet,
+PizzaHutWebsite PizzaHut,
+PizzaHutStore store
+Pizza pizza,
+CreditCard card,
+CreditCarCompany visa
+
+if Internet.isAvailable
+  zoe. searchTheInternet  -> internet, keywords: PizzaHut
+  If PizzaHut is open
+     if zoe.hasAnAccount
+       zoe.signInPizzaHut 
+     else
+　　   zoe.signUpForPizzaHut -> name, address, phoneNumber
+　　 end
+　　 zoe.PizzaHut.searchForPizza  -> name, size, flavor : pizza 
+        if zoe.findDesirablePizaa =true
+		  zoe.orderPizza -> pizza.name, creditCard, address, PizzaHut :         
+                         pizzaOrder
+		 Else
+			zoe.creatHerOwnPizza -> size，crust，sauce，crustFlavor，toppings:  
+                                 pizaa
+	       zoe.orderPizza  -> pizza.name, creditCard, address, PizzaHut :       
+                           pizzaOrder
+        end 
+	    store.takePizzaOrder
+        store.makePizza  ->pizaaOrder 
+        store.deliverpizaa ->pizzaOrder
+   Else
+　　zoe.cantOrderPizaaToday
+   end
+Else
+   zoe.browseInternetAfterAWhileBack
+	
+	
+
+
+4. Design a code sharing platform (eg: Github).
+
+Things（Objects）：
+ platform: 
+   data: user, repository, project 
+   behavior: N/A
+ user：
+　　data：name username activity 
+　　behavior：login, sign up, push，pull，commit，browse, link 
+  repository： 
+　　data：name, description，project，path，folder，
+　　behavior：N/A
+  projcet： 
+    data：name，code，path
+　　behavior：N/A
+　　
+Sequence of invoking behaviors on Objects:
+Platform platform
+User user
+Repository repository 
+Project project
+
+If platform.isAvailble
+   if  ! user.hasAnAccount
+     user. signUP 
+   user.logInPlatform  ->username, password: platform
+   loop
+   if  ！user.findSuitableRepositroy 
+     user. setUpANewRepository  ->name，description ：path
+   user. pushAnProject  -> repository, project
+   if user. wantToEditProject
+     if user.linked 
+　　　 user. pullTheProject
+　　　 user. editTHeProject -> project, change: new project
+　　　 project = new project
+   end
+     
+
+
+
+
+5. Design a soft-drink/snacks vending machine. 
+  
+Things（objects）：
+  vendind machine: 
+     data: inventory, product shelf，products，payment machine，select panel，pick-up window
+     behavior: start，stop，sellProduct
+  Inventory：
+　　 data：serialNumber，products（soft-drinks/snacks），prize，stock，
+     behavior：fill，alert，open，close
+  product shelf:
+     data: N/A
+     behavior: taget, drop,refuse
+  products： 
+     data：name, serialnumber，prize，status，
+     behavior：drop
+  money:
+     data: creditCard, cash, coin
+     behavior: pay
+  payment machine：
+     data：posMachine，cashReceiver，coinReceiver，change，refound
+     behavior：start, scan，count，sum，calculate, take，return, stop
+  select panel：
+     data： numberList, confirm, cancel,
+     behavior：press, accept, refuse,
+  pick-up window：
+     data：products，change，refund
+     behavior：deliver
+ 
+Sequence of invoking behaviors on Objects:
+vending machine：VMachine
+Inventory inventory
+products[] item
+select panel button
+Money money
+payment machine payment
+product shelf: shelf
+pick-up window pickup
+
+if VMachine. isAvailable
+   button.press  -> item.serialNumer: item.prize
+   if item is in stock
+      moneyAmount=0
+      loop
+         payment.start
+         money. pay
+         payment. scan
+         if money is acceptable
+            payment. takeTheMoney 
+            moneyAmount++
+            if moneyAmount=item.prize
+               break 
+             else if moneyAmount>item.prize
+                payment. calculateTheBalance ->money, item.prize: change
+                moneyAmount=moneyAmount-change
+             break
+             end
+          else
+           payment. refuseTheMoney
+      end
+      if moneyAmount>=item.prize
+         shelf.targetTheProduct -> item.serialNumber: item
+         shelf.dropTheProduct -> item
+         pickup.deliver ->item, change
+      else
+         shelf.refuse
+      end 
+   else
+　　　payment.stop
+　　　inventory.alert  ->item.serialNumber: item.name
+　　　inventory.fill  ->item.name
+   end
+else
+  VMachine.cantsellProductNow
+   
