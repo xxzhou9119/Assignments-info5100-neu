@@ -308,4 +308,5 @@ if VMachine. isAvailable
    end
 else
   VMachine.cantsellProductNow
+  
    
