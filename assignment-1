@@ -1,4 +1,4 @@
- Problem1：Hiking 
+1：Hiking 
 Description：Go hiking on Mountain Rainier on weekend. 
 Substories：
  1.1. Prepare for hiking：rent a car，buy equipments for hiking
@@ -60,7 +60,7 @@ If mount. isOpen
      car. stop
      zoe.eatAtRestaurant -> Mcdonald’s
      end
-   zoe.buyTicket -> office
+   zoe.buyTicket -> office: ticket
    loop
      zoe.hike
      if zoe is tired and lobby is available
@@ -87,7 +87,7 @@ Things(Objects):
 　　behavior：open，close
   organiser:
 　　data: name，address，phoneNumber，emailAddress，
-　　behavior：organise，findLocation，contact，inform，negotiate，putUpAdervertisement，
+　　behavior：organise，findLocation，invite，inform，negotiate，putUpAdervertisement，
   location：
 　　data：name，address，size，capacity，
 　　behavior：N/ A
@@ -112,9 +112,9 @@ If suite103 is appropriate -> time, address, size, capacity
   organizer.putUpAdvertisement 
   studentNum=0
   loop
-　　if Num< Suite103.capacity
+　　if studentNum< Suite103.capacity
       student.registerOnWebsite 
-　　  studentNum=studentNum+1
+　　   studentNum=studentNum+1
 　　else
 　　  student.cantRegister
 　　end
@@ -238,7 +238,7 @@ If platform.isAvailble
 5. Design a soft-drink/snacks vending machine. 
   
 Things（objects）：
-  vendind machine: 
+  vending machine: 
      data: inventory, product shelf，products，payment machine，select panel，pick-up window
      behavior: start，stop，sellProduct
   Inventory：
@@ -246,9 +246,9 @@ Things（objects）：
      behavior：fill，alert，open，close
   product shelf:
      data: N/A
-     behavior: taget, drop,refuse
+     behavior: target, drop,refuse
   products： 
-     data：name, serialnumber，prize，status，
+     data：name, serialNumber，prize，status，
      behavior：drop
   money:
      data: creditCard, cash, coin
@@ -297,7 +297,9 @@ if VMachine. isAvailable
       if moneyAmount>=item.prize
          shelf.targetTheProduct -> item.serialNumber: item
          shelf.dropTheProduct -> item
-         pickup.deliver ->item, change
+         if hasChange=true
+            item=item+change
+         pickup.deliver ->item
       else
          shelf.refuse
       end 
