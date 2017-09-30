@@ -1,8 +1,12 @@
+/* good Work
+ * score 10 + extra credit 3.5; Total score = 10
+ */
 import java.util.ArrayList;
 
 public class Assignment2 {
 
 	// No.1
+	// score 2
 	public static double employeeSalary(double hours) {
 		double sum = 0;
 		if (hours >= 0 && hours <= 36) {
@@ -19,6 +23,7 @@ public class Assignment2 {
 	}
 
 	// No.2
+	// score 2
 	public static int addDigits(int input) {
 		int sum = 0;
 		int remainder;
@@ -39,6 +44,7 @@ public class Assignment2 {
 	}
 
 	// No.3
+	//score 2
 	public static void printPerfectNumbers(int n) {
 		int count = 0;
 		for (int i = 2; i < n + 1; i++) {
@@ -57,6 +63,7 @@ public class Assignment2 {
 	}
 
 	// No.4
+	// score 2 + extra credit 0.5
 	public class Pizza {
 		String pizzaType;
 		double unitPrize;
@@ -83,7 +90,7 @@ public class Assignment2 {
 	}
 
 	// No.5
-
+	// score 2 + extra credit 1
 	class Customer {
 		String name;
 		ArrayList<Pizza> orderedPizza;
@@ -123,6 +130,7 @@ public class Assignment2 {
 	}
 
 	// No.6
+	//extra credit 2
 	public static void printIsoscelesTriangle(int n) {
 		if (n < 1) {
 			System.out.println("Nothing to print!");
