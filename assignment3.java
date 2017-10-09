@@ -1,9 +1,11 @@
-
+/* good work
+ * score 10 + extra credit 2; total score 10
+ */
 import java.util.Arrays;
 
 public class Assignment3 {
 	
-	/* No.1
+	/* No.1 // score 1
 	error :
 	 public setName(String name){
 	return name;
@@ -26,7 +28,7 @@ public class Assignment3 {
         The type of parameters within two constructors of one Class should not be the same.
          
          
-	 No.2
+	 No.2 // score 1
 	 error:
 	void getTime(){
         return time;
@@ -45,12 +47,13 @@ public class Assignment3 {
      in the Getter is "String", the type before the Getter's name should be "String", not "void". 
 	*/
 	
-	//No.3:
+	//No.3: // score 2
 	public static String removeVowelsFromString(String input) {
 		String stringWithoutVowels = "";
 		for (int i = 0; i < input.length(); i++) {
 			if (!isVowel(input.charAt(i))) {
-				stringWithoutVowels = stringWithoutVowels + input.charAt(i);
+				stringWithoutVowels = stringWithoutVowels + input.charAt(i); // Strings are immutable.
+	// by concatenating in loop you are creating new object every time. Try using StringBuilder
 			}
 		}
 		return stringWithoutVowels;
@@ -58,7 +61,7 @@ public class Assignment3 {
 
 	public static boolean isVowel(char c) {
 		String vowels = "aeiouAEIOU";
-		for (int i = 0; i < vowels.length(); i++) {
+		for (int i = 0; i < vowels.length(); i++) { // u can use contains() method for less code here.
 			if (c == vowels.charAt(i)) {
 				return true;
 			}
@@ -66,7 +69,7 @@ public class Assignment3 {
 		return false;
 	}
 	
-	// No.4:
+	// No.4: // score 2
 	public static boolean checkIfTwoStringsAreAnagrams(String s1, String s2) {
 		// If the lengths of two strings are not same, they can't be Anagrams.
 		if (s1.length() != s2.length()) {
@@ -94,7 +97,7 @@ public class Assignment3 {
 		return true;
 	}
 	
-	//No.5:
+	//No.5: // score 4 + extra credit 2
 	public class Calculator {
 			
 		public  double Addition(double a,double b){
