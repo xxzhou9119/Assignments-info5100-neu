@@ -1,5 +1,5 @@
 
-public class Question3 {
+public class Question3 { // score 7
 	public static void main(String[] args){
 		int[] nums={1,2,3};
 		System.out.println(minMoves(nums));
