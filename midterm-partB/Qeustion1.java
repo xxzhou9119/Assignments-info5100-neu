@@ -1,7 +1,7 @@
 
 public class Qeustion1 {	
 	
-	public static int[] reverseEvenIndices(int[] nums){
+	public static int[] reverseEvenIndices(int[] nums){ // score 6
         int n=0;
         if(nums.length%2==1){
         	n=nums.length-1;

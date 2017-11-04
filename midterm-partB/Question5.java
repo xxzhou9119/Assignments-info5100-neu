@@ -1,4 +1,16 @@
+//extra credit 10
 import java.util.ArrayList;
+
+/*
+	for input = { {1,1,0,1,0},
+                      {1,1,1,1,1},
+                      {1,0,0,1,0},
+                      {1,1,0,1,1}};
+	expected output = [[0, 0], [1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3], [3, 4]]
+	your output 	= [[0, 0], [1, 0], [1, 1], [1, 2], [1, 3], [2, 3], [3, 3]]
+	however we asked for N*N, your code works fine for N*N
+
+ */
 
 public class Question5 {
 	class Cell{

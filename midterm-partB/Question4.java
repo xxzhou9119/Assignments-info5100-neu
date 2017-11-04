@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Question4 {
+public class Question4 { // score 7
 	 public static void main(String[] args){
 		 int n=3;
 		 int m=4;
