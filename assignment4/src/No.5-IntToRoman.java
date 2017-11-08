@@ -1,5 +1,5 @@
 
-public class IntToRoman {
+public class IntToRoman { // score 2
 	public static void main(String[] args) {
 		int a=399;
 		String b=intToRoman(a);
