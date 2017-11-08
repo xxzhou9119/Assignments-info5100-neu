@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 //No.4:
-public class TestForStudent {
+public class TestForStudent { // score 2
 	public static void main(String args[]) {
 		Student s = new Student("zoe","001" );
 		Course c = new Course("Java");
