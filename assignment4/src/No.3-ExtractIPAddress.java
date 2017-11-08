@@ -1,5 +1,5 @@
 // No.3
-public class ExtractIPAddress {
+public class ExtractIPAddress { // score update
 	public static void main(String args[]){
 		ExtractIPAddress comp=new ExtractIPAddress();
 		IpAddress ip = comp.new IpAddress("224.0.118.62");
