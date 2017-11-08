@@ -1,5 +1,5 @@
 //No.2: 
-class RockPaperScissorsGame{
+class RockPaperScissorsGame{ // score 2
    class Tool {
 	 protected double strength;
      protected char type;
