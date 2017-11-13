@@ -1,5 +1,5 @@
 //No.1:
-public class formatLicenseKey {
+public class formatLicenseKey { // score 2
 	public static void main(String[] args) {
 		String a="-A-A-A-a--";
 		String b= LicenseKeyFormatting(a,2);
