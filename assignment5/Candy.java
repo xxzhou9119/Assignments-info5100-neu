@@ -1,6 +1,6 @@
 
 public class Candy extends DessertItem{
-	float weight;
+	float weight; // access should be private
 	int pricePerPound;
 	
 	boolean hasWeight(){
