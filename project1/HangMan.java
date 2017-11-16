@@ -1,4 +1,7 @@
-
+/* Good Work
+ * Score 18.5
+ * you are not printing previously guessed letters
+ */
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -6,7 +9,7 @@ import java.util.Scanner;
 
 public class HangMan {
 	
-	public static String targetWord;
+	public static String targetWord; // access should be private
 	private Character guessWord;
 	private String[] line;
 	public static String correctWord;
