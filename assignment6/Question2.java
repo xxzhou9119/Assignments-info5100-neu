@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class Question2 {
+public class Question2 { // score 1
 //	2. Modify the following parse() method so that it will compile: (Score 1)  
 //	 
 //    ``` java
