@@ -1,3 +1,6 @@
+/* Good work
+ * Score 10 + extra credit 2; Total score 10
+ */
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,7 +23,7 @@ import java.util.Queue;
 //	    *  Machine should not allow user to withdrawal more amount than his *availableBalance*.
 //	    *  You can add additional functions to make it pretty. UI is not required.
 //
-	double availableAmountInMachine;
+	double availableAmountInMachine; // should be private
 	double transactionFee;
 	HashMap<User,String> userData;
 	
