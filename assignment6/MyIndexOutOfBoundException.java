@@ -1,5 +1,5 @@
 
-public class MyIndexOutOfBoundException extends ArrayIndexOutOfBoundsException{
+public class MyIndexOutOfBoundException extends ArrayIndexOutOfBoundsException{ // score 2
 	
 	
 	public MyIndexOutOfBoundException(int lowerBound,int upperBound,int index){
