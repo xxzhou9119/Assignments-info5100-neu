@@ -3,7 +3,7 @@ import java.util.List;
 
 public class PascalTriangle {
 
-	public static void printPascalTriangle(int n){
+	public static void printPascalTriangle(int n){ // use long instead of int, for input 100 int overflows// score 1.5
 		List<int[]> pascalTriangle=new ArrayList<int[]>();
 		if(n<=0){
 			System.out.println("Illegal number.");
