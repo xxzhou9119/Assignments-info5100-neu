@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.util.Scanner;
 
-public class FileCounter {
+public class FileCounter { // score 3
 	private int characterCount, wordCount, lineCount;
 	
 	   
