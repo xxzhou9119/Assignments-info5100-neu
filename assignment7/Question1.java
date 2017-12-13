@@ -1,4 +1,4 @@
-
+// score 2
 public class Question1 {
 
 	class maxValueThread extends Thread{
