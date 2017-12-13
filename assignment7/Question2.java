@@ -1,5 +1,5 @@
 
-public class Question2 {
+public class Question2 { // score 2
 	class helloThread extends Thread{
 		private final String s="Hello";
 		private int num;
