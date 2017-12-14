@@ -1,3 +1,7 @@
+/* Good Work
+ * score 19
+ * You are setting spades as shortest even though it contains king, queen or Ace. check requirements
+ */
 import java.util.Scanner;
 
 public class GameDriver {
